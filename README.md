@@ -20,8 +20,7 @@
 
 <br>
 
-Concreto is a comprehensive design system that empowers AI coding agents to create exceptional...
-*(aquí sigue tu texto tal cual lo escribiste)*
+Concreto is a native UI/UX design intelligence protocol for AI agents. It eliminates 'AI slop' by enforcing 80+ deterministic design rules, providing an advanced command vocabulary for real-time iteration, and integrating natively with major AI coding environments like Cursor, Claude Code, and Gemini CLI.
 
 # Concreto
 
