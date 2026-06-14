@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concreto</title>
+  <style>
+    :root {
+      --c-foundation: oklch(12% 0.005 95);
+      --c-slab: oklch(18% 0.006 95);
+      --c-building: oklch(25% 0.007 95);
+      --c-safety: oklch(68% 0.20 40);
+      --c-marker: oklch(55% 0.18 240);
+      --c-structural: oklch(92% 0 0);
+      --c-architectural: oklch(78% 0 0);
+      --c-blueprint: oklch(55% 0 0);
+      --c-font: 'Inter', system-ui, sans-serif;
+      --c-font-mono: 'JetBrains Mono', monospace;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      width: 380px;
+      background: var(--c-foundation);
+      color: var(--c-architectural);
+      font-family: var(--c-font);
+      font-size: 14px;
+      padding: 16px;
+    }
+    
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--c-building);
+    }
+    
+    .logo {
+      width: 32px;
+      height: 32px;
+      background: var(--c-safety);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--c-foundation);
+      font-size: 14px;
+    }
+    
+    h1 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--c-structural);
+    }
+    
+    .subtitle {
+      font-size: 11px;
+      color: var(--c-blueprint);
+      font-family: var(--c-font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .scan-section {
+      margin-bottom: 16px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      background: var(--c-safety);
+      color: var(--c-foundation);
+      border: none;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: filter 0.2s;
+    }
+    
+    button:hover {
+      filter: brightness(1.1);
+    }
+    
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .options {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    
+    .option {
+      flex: 1;
+      padding: 8px;
+      background: var(--c-slab);
+      border: 1px solid var(--c-building);
+      color: var(--c-architectural);
+      font-size: 11px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    
+    .option.active {
+      border-color: var(--c-safety);
+      color: var(--c-structural);
+    }
+    
+    .results {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    
+    .result-item {
+      padding: 10px;
+      margin-bottom: 8px;
+      background: var(--c-slab);
+      border-left: 3px solid;
+    }
+    
+    .result-item.critical {
+      border-color: #ef4444;
+    }
+    
+    .result-item.high {
+      border-color: #f59e0b;
+    }
+    
+    .result-item.medium {
+      border-color: #3b82f6;
+    }
+    
+    .result-item.low {
+      border-color: #22c55e;
+    }
+    
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    
+    .result-id {
+      font-family: var(--c-font-mono);
+      font-size: 11px;
+      color: var(--c-blueprint);
+    }
+    
+    .result-severity {
+      font-size: 10px;
+      padding: 2px 6px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .result-severity.critical { background: rgba(239,68,68,0.2); color: #ef4444; }
+    .result-severity.high { background: rgba(245,158,11,0.2); color: #f59e0b; }
+    .result-severity.medium { background: rgba(59,130,246,0.2); color: #3b82f6; }
+    .result-severity.low { background: rgba(34,197,94,0.2); color: #22c55e; }
+    
+    .result-message {
+      font-size: 12px;
+      color: var(--c-structural);
+      line-height: 1.4;
+    }
+    
+    .summary {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--c-building);
+    }
+    
+    .summary-item {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .summary-count {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .summary-label {
+      font-size: 10px;
+      color: var(--c-blueprint);
+      text-transform: uppercase;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 24px;
+      color: var(--c-blueprint);
+    }
+    
+    .ml-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      background: rgba(168, 85, 247, 0.2);
+      color: #a855f7;
+      font-size: 9px;
+      font-family: var(--c-font-mono);
+      border-radius: 2px;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">C</div>
+    <div>
+      <h1>Concreto</h1>
+      <div class="subtitle">Design Intelligence</div>
+    </div>
+  </header>
+  
+  <div class="scan-section">
+    <div class="options">
+      <div class="option active" data-mode="fast">Fast</div>
+      <div class="option" data-mode="full">Full</div>
+      <div class="option" data-mode="ml">ML</div>
+    </div>
+    <button id="scanBtn">Scan Page</button>
+  </div>
+  
+  <div class="results" id="results">
+    <div class="empty-state">
+      Click "Scan Page" to analyze the current page for design anti-patterns.
+    </div>
+  </div>
+  
+  <div class="summary" id="summary" style="display: none;">
+    <div class="summary-item">
+      <div class="summary-count" id="criticalCount">0</div>
+      <div class="summary-label">Critical</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-count" id="highCount">0</div>
+      <div class="summary-label">High</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-count" id="mediumCount">0</div>
+      <div class="summary-label">Medium</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-count" id="totalF">0</div>
+      <div class="summary-label">Total</div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

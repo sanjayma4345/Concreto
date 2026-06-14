@@ -1,0 +1,48 @@
+:root {
+  --c-foundation: oklch(12% 0.005 95);
+  --c-slab: oklch(18% 0.006 95);
+  --c-formwork: oklch(25% 0.007 95);
+  --c-rebar: oklch(35% 0.008 95);
+  --c-mesh: oklch(28% 0.007 95);
+  --c-raw: oklch(58% 0.008 95);
+  --c-poured: oklch(45% 0.010 95);
+  --c-polished: oklch(72% 0.006 95);
+  
+  --c-safety: oklch(68% 0.20 40);
+  --c-marker: oklch(55% 0.18 240);
+  --c-grading: oklch(80% 0.16 85);
+  
+  --c-structural: oklch(92% 0 0);
+  --c-architectural: oklch(78% 0 0);
+  --c-blueprint: oklch(55% 0 0);
+  
+  --c-font-display: 'Space Grotesk', 'JetBrains Mono', system-ui, monospace;
+  --c-font-body: 'Inter', 'SF Pro Text', system-ui, sans-serif;
+  --c-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  --c-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --c-ease-pour: cubic-bezier(0.4, 0, 0.2, 1);
+  --c-duration: 200ms;
+  
+  --c-radius-none: 0;
+  --c-radius-micro: 2px;
+  --c-radius-minimal: 4px;
+  --c-radius-soft: 8px;
+  
+  --c-space-xs: 8px;
+  --c-space-sm: 16px;
+  --c-space-md: 24px;
+  --c-space-lg: 48px;
+  --c-space-xl: 96px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root[c-theme="auto"] {
+    --c-foundation: oklch(95% 0.003 95);
+    --c-slab: oklch(98% 0.002 95);
+    --c-formwork: oklch(92% 0.004 95);
+    --c-structural: oklch(12% 0.005 95);
+    --c-architectural: oklch(25% 0.004 95);
+    --c-blueprint: oklch(50% 0.003 95);
+  }
+}

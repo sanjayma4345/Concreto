@@ -1,0 +1,99 @@
+{
+  "name": "concreto",
+  "version": "1.0.0",
+  "author": "Concreto Team",
+  "description": "Advanced design intelligence system for AI coding agents - OWASP style rules, ML-enhanced detection, and comprehensive design guidance",
+  "keywords": [
+    "design",
+    "frontend",
+    "ux",
+    "skills",
+    "ai",
+    "anti-patterns",
+    "lint",
+    "accessibility",
+    "css",
+    "html",
+    "detection",
+    "ci-cd",
+    "ml",
+    "machine-learning",
+    "owasp"
+  ],
+  "license": "MIT",
+  "homepage": "https://concreto.design",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "bin": {
+    "concreto": "cli/bin/cli.js"
+  },
+  "main": "./cli/engine/detect-antipatterns.mjs",
+  "exports": {
+    ".": "./cli/engine/detect-antipatterns.mjs",
+    "./browser": "./cli/engine/detect-antipatterns-browser.js",
+    "./ml": "./cli/engine/ml/index.mjs",
+    "./rules": "./cli/engine/registry/antipatterns.mjs"
+  },
+  "files": [
+    "cli/",
+    "skill/",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun run scripts/build.js",
+    "build:watch": "bun run scripts/build.js --watch",
+    "dev": "bun run --hot scripts/dev-server.js",
+    "test": "bun test",
+    "test:coverage": "bun test --coverage",
+    "test:e2e": "bun test tests/e2e",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "detect": "node cli/bin/cli.js detect",
+    "analyze": "node cli/bin/cli.js analyze",
+    "ml:train": "node cli/bin/cli.js ml train",
+    "ml:predict": "node cli/bin/cli.js ml predict",
+    "release": "bun run scripts/release.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "clipanion": "^4.0.0",
+    "css-select": "^5.0.0",
+    "css-tree": "^3.0.1",
+    "domutils": "^3.1.0",
+    "fast-glob": "^3.3.2",
+    "fast-xml-parser": "^4.5.0",
+    "highlight.js": "^11.10.0",
+    "htmlparser2": "^9.1.0",
+    "js-yaml": "^4.1.0",
+    "marked": "^13.0.0",
+    "onnxruntime-node": "^1.19.0",
+    "ora": "^8.0.1",
+    "puppeteer": "^23.0.0",
+    "sharp": "^0.33.5",
+    "typanion": "^3.14.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/bun": "latest",
+    "@types/node": "^22.0.0",
+    "bun-types": "latest",
+    "typescript": "^5.5.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.28.0",
+    "@google/generative-ai": "^0.20.0",
+    "openai": "^4.52.0"
+  }
+}

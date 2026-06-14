@@ -1,0 +1,222 @@
+@import './concreto-tokens.css';
+
+:root {
+  --c-grid-unit: 8px;
+  --c-grid-gutter: 24px;
+  --c-container-max: 1440px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--c-foundation);
+  color: var(--c-architectural);
+  font-family: var(--c-font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c-container {
+  max-width: var(--c-container-max);
+  padding: 0 var(--c-grid-gutter);
+  margin: 0 auto;
+}
+
+.c-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--c-grid-gutter);
+}
+
+.c-flex { display: flex; }
+.c-flex-col { flex-direction: column; }
+.c-flex-wrap { flex-wrap: wrap; }
+.c-items-center { align-items: center; }
+.c-justify-between { justify-content: space-between; }
+.c-gap-xs { gap: calc(var(--c-grid-unit) * 1); }
+.c-gap-sm { gap: calc(var(--c-grid-unit) * 2); }
+.c-gap-md { gap: calc(var(--c-grid-unit) * 3); }
+.c-gap-lg { gap: calc(var(--c-grid-unit) * 4); }
+
+h1 {
+  font-family: var(--c-font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--c-structural);
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: var(--c-font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--c-structural);
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: var(--c-font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--c-structural);
+}
+
+p {
+  max-width: 75ch;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--c-safety);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-family: var(--c-font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.c-button:focus-visible {
+  outline: 2px solid var(--c-marker);
+  outline-offset: 2px;
+}
+
+.c-button-primary {
+  background: var(--c-safety);
+  color: var(--c-foundation);
+}
+
+.c-button-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.c-button-secondary {
+  background: transparent;
+  color: var(--c-structural);
+  border: 2px solid var(--c-structural);
+}
+
+.c-button-secondary:hover {
+  background: var(--c-structural);
+  color: var(--c-foundation);
+}
+
+.c-button-ghost {
+  background: transparent;
+  color: var(--c-safety);
+  border: 2px solid var(--c-safety);
+}
+
+.c-card {
+  background: var(--c-slab);
+  border: 1px solid var(--c-formwork);
+  border-radius: 0;
+  padding: 24px;
+}
+
+.c-input {
+  background: var(--c-foundation);
+  border: 2px solid var(--c-formwork);
+  border-radius: 0;
+  padding: 12px 16px;
+  color: var(--c-structural);
+  font-family: var(--c-font-mono);
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.c-input:focus {
+  border-color: var(--c-safety);
+  outline: none;
+}
+
+.c-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--c-font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-blueprint);
+}
+
+.c-section {
+  padding: 96px 0;
+}
+
+.c-section-head {
+  margin-bottom: 48px;
+}
+
+.c-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-family: var(--c-font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.c-tag-critical {
+  background: rgba(220, 38, 38, 0.15);
+  color: #ef4444;
+}
+
+.c-tag-high {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.c-tag-medium {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+.c-tag-low {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+@media (max-width: 768px) {
+  .c-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .c-section {
+    padding: 48px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concreto Test Fixtures</title>
+  <style>
+    :root {
+      --text-light: #888;
+      --text-dark: #333;
+      --bg-blue: #3b82f6;
+      --bg-purple: #8b5cf6;
+      --bg-dark: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <h1>SHOULD_FLAG - Anti-Patterns That Must Be Detected</h1>
+  
+  <section id="side-stripe-border">
+    <h2>"Side-stripe border on card"</h2>
+    <div style="border-left: 4px solid #3b82f6; padding-left: 16px; background: #f8fafc;">
+      <p>This card has a side-stripe border that should be flagged.</p>
+    </div>
+  </section>
+  
+  <section id="gradient-text">
+    <h2>"Gradient text pattern"</h2>
+    <p style="background: linear-gradient(90deg, #8b5cf6, #3b82f6); -webkit-background-clip: text; color: transparent; font-size: 24px;">
+      This gradient text should be flagged.
+    </p>
+  </section>
+  
+  <section id="gray-on-colored">
+    <h2>"Gray text on colored background"</h2>
+    <div style="background: var(--bg-blue); padding: 16px;">
+      <p style="color: #999;">This gray text on blue background should be flagged.</p>
+    </div>
+  </section>
+  
+  <section id="nested-cards">
+    <h2>"Nested cards"</h2>
+    <div class="card" style="background: #f1f5f9; padding: 24px; border-radius: 8px;">
+      <p>Outer card</p>
+      <div class="card" style="background: #e2e8f0; padding: 16px; margin-top: 12px; border-radius: 8px;">
+        <p>Inner card (should be flagged)</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skipped-heading">
+    <h2>"Skipped heading level"</h2>
+    <h1>Main Heading</h1>
+    <h3>Skipped h2 (should be flagged)</h3>
+  </section>
+  
+  <section id="bounce-easing">
+    <h2>"Bounce easing"</h2>
+    <button style="transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+      Button with bounce
+    </button>
+  </section>
+  
+  <hr>
+  
+  <h1>SHOULD_PASS - Valid Patterns That Must Not Be Flagged</h1>
+  
+  <section id="valid-stripe">
+    <h2>"Valid 1px border"</h2>
+    <div style="border-left: 1px solid #e2e8f0; padding: 16px;">
+      <p>1px border is valid and should pass.</p>
+    </div>
+  </section>
+  
+  <section id="valid-solid-text">
+    <h2>"Solid color text"</h2>
+    <p style="color: #1e293b; font-size: 24px;">Solid colored text is valid.</p>
+  </section>
+  
+  <section id="valid-contrast">
+    <h2>"High contrast text on colored"</h2>
+    <div style="background: var(--bg-blue); padding: 16px;">
+      <p style="color: white;">White text on blue is valid contrast.</p>
+    </div>
+  </section>
+  
+  <section id="valid-heading-hierarchy">
+    <h2>"Proper heading hierarchy"</h2>
+    <h3>Subtitle</h3>
+    <h4>Sub-subtitle</h4>
+  </section>
+  
+  <section id="valid-easing">
+    <h2>"Valid ease-out"</h2>
+    <button style="transition: opacity 0.2s ease-out;">
+      Valid transition
+    </button>
+  </section>
+  
+  <section id="valid-flexbox-layout">
+    <h2>"Valid flexbox layout"</h2>
+    <div style="display: flex; gap: 16px;">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
+  </section>
+</body>
+</html>
